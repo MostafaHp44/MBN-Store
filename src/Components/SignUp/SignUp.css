@@ -1,0 +1,38 @@
+.Main-SignUp
+{
+    padding: 5em;
+    display: flex;
+    gap: 3em;
+    box-shadow: 0 3px 20px 0 rgb(0 0 0);
+    background-color: royalblue;
+    margin: 7em;
+}
+
+.background-signup
+{
+    background-image:url('./signup2.jpg') ;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 43em;
+    transition: 0.5s;
+}
+.background-signup:hover
+{
+    background-image: url('./signup.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 40em;
+    transition: 0.5s;
+}
+.SignUp
+{
+    background-color: #fafafa;
+    padding: 3em;
+}
+.row--3
+{
+    text-align: center;
+
+}

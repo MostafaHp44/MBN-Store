@@ -1,0 +1,98 @@
+.Main-Footer
+{
+    background-image: url('./wallpaperflare.com_wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5em;
+}
+
+.BigFooter
+{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px black solid;
+    padding-bottom:10em;
+}
+
+
+.List-menu-1,.List-menu-2
+{
+    padding: 10px;
+    cursor: pointer;
+}
+.l1
+{
+    list-style-type: none;
+    padding: 0em;
+}
+.li1
+{
+    padding: 5px;
+    transition: 0.5s;
+}
+.li1:hover 
+{
+    border-bottom: 1px white solid ;
+    transition: 0.6s;
+    background-color:royalblue;
+}
+.CopyRight
+{
+    padding-top: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Accept:hover
+{
+    border-bottom: 1px white solid;
+    transition: 0.5s;
+}
+.iconpayment
+{
+    padding-top: 10px;
+}
+.logopayment
+{
+    padding: 5px;
+    cursor: pointer;
+}
+.logopayment:hover
+{
+    fill: #f75990;
+    transition: 0.5s;
+}
+
+@media (max-width:1024px)
+{
+.Main-Footer
+{
+    
+    padding: 5em;
+    width: 100em;
+}    
+.Main-LastsNews
+{
+    width: 80em;
+}
+.slider
+{
+    width: 100em;
+}
+.Main-FeaturedBrands
+{
+    width: 99em;
+}
+.Main-slideshow
+{
+    width: 100em;
+}
+.App
+{
+    background-color: #fff;
+}
+.MainBigDynamicText
+{
+    width: 100em;
+}
+}

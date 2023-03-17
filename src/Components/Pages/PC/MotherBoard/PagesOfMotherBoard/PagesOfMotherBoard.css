@@ -1,0 +1,149 @@
+.BigShow
+{
+    background-color: #1E1E1E;
+}
+.Page-Details
+{
+    display: flex;
+    justify-content: space-around;
+}
+.Right-Details
+{
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 4em;
+    text-align: right;
+    position: relative;
+    right: 5em;
+    display: flex;
+}
+.text-Right-Details:hover
+{
+    border-bottom: 1px white solid;
+    transition: 0.5s;
+    
+}
+.Left-Details
+{
+    text-align: left;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.ListItem,
+.GridItem
+{
+    padding: 10px;
+}
+
+.Page-Content
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    margin: 3em;
+}
+.Main-Filter
+{
+    font-weight: 700;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    background-image: linear-gradient(180deg,#252525,#252525);
+    width: 100%;
+    max-width: 250px;
+    position: relative;
+    height: fit-content;
+    
+}
+.Filter
+{
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+}
+.NumOfItem
+{
+    color: white;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: flex-end;
+    margin-bottom: -15px;
+    position: relative;
+    left: 3em;
+}
+.Menu-filter
+{
+    width: 100%;
+    max-width: 1400px;
+    color: #222;
+    margin: auto;
+    text-align: left;
+    padding-top: 20px;
+    display: flex;
+    padding-bottom: 2vh;
+}
+.Main-Menu-filter
+{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    user-select: none;
+    flex-direction: column;
+    padding: 2em 0 2em 0;
+}
+.elements-Menu-filter
+{
+    list-style-type: none;
+    border-bottom: 2px solid #333;
+    padding: 1em 1em 1em 1em ;
+}
+.text-elements-Menu-filter
+{
+    color: white;
+    font-size: 13px;
+}
+.element
+{
+    list-style-type: none;
+    color: #fafafa;
+    font-size: 15px;
+    padding-top: 1em;
+   
+    
+}
+
+.element1
+{
+    padding: 3px 0;
+}
+.btnreset
+{
+    display: flex;
+    position: relative;
+    top: 1em;
+    left: 3em;
+}
+
+
+
+
+.searchItem
+{
+    display: flex;
+}
+.List-Grid
+{
+    background-color:#1E1E1E;
+}
+.List-Grid:hover
+{
+    background-color: #fafafa;
+    transition: 0.5s;
+}

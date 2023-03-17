@@ -1,0 +1,243 @@
+.Main-Nav
+{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+.Nav
+{
+    display: flex;
+    align-items: center;  
+    justify-content: space-between; 
+}
+.logo
+{
+    width: 100px;
+    height: 100px;
+    transition: 0.5s;
+}
+.logo:hover
+{
+    background-color: black;
+    transition: 0.5s;
+}
+.Center-Nav
+{
+}
+.Big-Nav
+{
+    padding: 2em;
+}
+.listnav
+{
+    display: flex;
+    list-style-type: none;
+    background-color: royalblue;
+    border-radius: 20px;
+}
+.PC,.Laptop,.Phone
+{
+    padding: 1em;
+    transition: 0.5s;
+}
+.PC:hover,.Laptop:hover,.Phone:hover
+{
+    color: white;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.PC:hover .BigCardOfCategory,
+.Laptop:hover .BigCardOfCategory,
+.Phone:hover .BigCardOfCategory
+{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+.Right-Nav
+{
+    display: flex;
+    
+}
+.Icon-signandLogin
+{
+    transition: 0.5s;
+}
+.Icon-signandLogin:hover
+{
+    color: royalblue;
+    transition: 0.5s;
+}
+.Icon-signandLogin:hover .SignUp-SignIn
+{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+.cart
+{
+    transition: 0.5s;
+}
+.cart:hover
+{
+transition: 0.5s;
+color: crimson;
+}
+.numitem
+{
+    background-color: crimson;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.BigCardOfCategory
+{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    width: 90%;
+    height: 30em;
+    background-image: url(./backgroudnav/nav3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    transform: translateX(-50%);
+    transition: 0.2s;
+}
+.maincol
+{
+    display: flex;
+    justify-content: space-around;
+}
+.col--1,
+.col--2,
+.col--3
+{
+    padding: 1em;
+}
+.col--1>h2,
+.col--2>h2,
+.col--3>h2
+{
+    font-weight: 400;
+    border-bottom: 1px white solid;
+    padding: 10px;
+    color: azure;
+}
+
+.category
+{
+    list-style-type: none;
+}
+.category1
+{
+    padding: 1em;
+}
+.category1>a
+{
+    transition: 0.5s;
+
+}
+.category1>a:hover
+{
+    color: whitesmoke;
+    transition: 0.5s;
+}
+.SignUp-SignIn
+{
+    position: absolute;
+    height: 30em;
+    background: transparent;
+    padding: 12px 0 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s all;
+    color: #000a14;
+    width: 25em;
+    text-align: left;
+}
+.Main-SignUp-SignIn
+{
+   
+    background-image:url('./backgroudnav/card9.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    border-radius: 8px;
+    position: fixed;
+    right:  4em;
+    width: 21em;
+}
+.row--1,
+.row--2
+{
+    border-bottom: 1px white solid;
+    padding: 1em;
+}
+.row--3
+{
+    padding: 1em;
+}
+.text-row--1,
+.text-row--2,
+.text-row--3
+{
+    text-align: left;
+}
+.icon-row--2{
+    position: absolute;
+    top: 15em;
+    left: 19em;
+    color: white;
+}
+
+.Main-ShopingCartCard
+{
+    width: 40%;
+    height: auto;
+    background-image: url('./cart2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    left: 56em;
+    opacity: 0;
+    top: 6em;
+    visibility: hidden;
+    transition: 0.4s;
+    padding: 1em;
+}
+.Mainrow
+{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+.titleitem,
+.priceitem
+{
+    color: black;
+    font-weight: 800;
+}
+.Icon-Cart:hover .Main-ShopingCartCard
+{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.4s;
+}
+.totalprice
+{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    border-top: 1px solid black;
+    padding: 2em;
+
+}

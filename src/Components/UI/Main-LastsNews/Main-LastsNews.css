@@ -1,0 +1,82 @@
+.Main-LastsNews
+{
+    font-size: 20px;
+    color: black;
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: #0069d7;
+    align-items: center;
+    margin-top: 5em;
+    margin-bottom: 0em;
+
+}
+
+.join
+{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 3em;
+    
+}
+
+.InputOfJoin
+{
+    min-width: 300px;
+    width: 100%;
+    color: #fff;
+    padding: 10px 0;
+}
+.FormLast
+{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 50px;
+    background: #fff;
+    color: #000;
+}
+.text1
+{
+display: flex;
+justify-content: flex-start;
+color: #000;
+font-weight: 600;
+font-size: 20px;
+}
+.text2
+{
+display: flex;
+justify-content: flex-start;
+color: white;
+font-weight: 500;
+font-size: 40px;
+}
+
+.inputjoin
+{
+    width: 70%;
+    height: 75px;
+    padding: 0 10px 0 20px;
+    border: 0;
+    font-family: "futura-medium",sans-serif;
+    font-size: 20px;
+    position: relative;
+    bottom: -1em;
+}
+.btnn
+{
+    border-radius: 50px;
+    border: 0;
+    padding: 10px;
+    background: #163358;
+    color: #fff;
+    font-family: "futura-pt",sans-serif;
+    width: 30%;
+    min-width: 120px;
+    cursor: pointer;
+}

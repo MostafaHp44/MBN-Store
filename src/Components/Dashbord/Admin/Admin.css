@@ -1,0 +1,60 @@
+.Main-Admin
+{
+    position: relative;
+    bottom: -10em;
+}
+.BigNavAdmin
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+.listadmin
+{
+    display: flex;
+    list-style-type: none;
+}
+.listadmin>li
+{
+    padding: 1em;
+}
+.Main-Panel
+{
+    display: flex;
+    justify-content: space-between;
+}
+.Edit-Panel
+{
+    border: 1px whitesmoke solid ;
+    margin: 2em ;
+    padding: 2em ;
+}
+.row1admin,
+.row2admin,
+.row3admin,
+.row4admin
+{
+    display: flex;
+    padding-bottom: 1em;
+    border-bottom: 1px royalblue solid;
+    margin-bottom: 1em;
+}
+h4
+{
+    font-size: 20px;
+    font-weight: 700;
+
+}
+.textrowadmin
+{
+    padding-right: 2em;
+}
+.iconadmin
+{
+    border: 0;
+    background-color: transparent;
+}
+.ShowItem
+{
+    margin: 2em;
+}

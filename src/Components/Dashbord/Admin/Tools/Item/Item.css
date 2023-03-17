@@ -1,0 +1,81 @@
+.Main-Item
+{
+    width: 100%;
+    display: flex;
+    max-width: 1136px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: relative;
+    min-height: 110vh;
+}
+.Big-Card-Item
+{
+    height: auto;
+    
+    background: #252525;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 12px;
+    margin-right: 10px;
+}
+.Card-Item
+{
+    padding-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Up-Card
+{
+    
+}
+.Down-Card
+{
+    
+}
+.Fav-Item
+{
+    padding-bottom: 7px;
+}
+.stockcard
+{
+    color: white;
+    padding: 2px 2px 2px 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 10px;
+}
+.Title-Item
+{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    padding: 1em;
+}
+.Price-Item
+{
+    font-size: 15px;
+    color: white;
+    font-weight: bolder;
+
+}
+.pricebyegy
+{
+    font-size: 10px;
+    color: greenyellow;
+}
+.Icon-Item
+{
+    color: crimson;
+}
+.ci:hover
+{
+    fill: white;
+}

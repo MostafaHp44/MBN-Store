@@ -1,0 +1,22 @@
+.MainPaymentProcess
+{
+    position: relative;
+    top: 10em;
+    left: 0em;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fafafa;
+}
+.finalitem
+{
+    display: grid;
+}
+.row1home
+{
+    font-weight: 800;
+    border-bottom: 1px black  solid;
+}
+.row2details
+{
+padding-top: 4em;
+}

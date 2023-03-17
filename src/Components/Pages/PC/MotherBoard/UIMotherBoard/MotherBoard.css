@@ -1,0 +1,41 @@
+.Main-MotherBoard
+{
+    position: relative;
+    top: -4em;
+}
+
+.Category-MotherBoard
+{
+  
+    background-color: #252525;
+}
+.text-Category-MotherBoard,
+.text-HostProduct
+{
+    color: white;
+    text-align: center;
+    padding: 14em;
+}
+
+.icon-Category-MotherBoard
+{
+    display: flex;
+    justify-content:space-around;
+    padding-bottom: 50px;
+}
+
+.im
+{
+width: 150px;
+height: auto;
+}
+.im:hover
+{
+    background-color: white;
+    transition: 0.4s;
+}
+
+.HostProduct
+{
+    background-color: #1E1E1E;
+}

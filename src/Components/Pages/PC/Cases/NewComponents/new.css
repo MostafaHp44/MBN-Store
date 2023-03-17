@@ -1,0 +1,55 @@
+
+.newfunc
+{
+    position: relative;
+}
+.img11
+{
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    clip: rect(auto, auto, auto, 616.812px);
+}
+.img22
+{
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    clip: rect(auto, 616.812px, auto, auto);
+}
+.BigLine
+{
+    align-items: center;
+    cursor: ew-resize;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    width: 40px;
+    left: 596.812px;
+}
+.ThinLine-Up,
+.ThinLine-Down
+{
+    background: #9C34B7;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    flex: 0 1 auto;
+    height: 100%;
+    width: 3px;
+}
+.btnline
+{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 0 auto;
+    height: auto;
+    justify-content: center;
+    width: auto;
+}

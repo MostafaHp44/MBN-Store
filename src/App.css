@@ -1,0 +1,15 @@
+*
+{
+  font-family: 'Shantell Sans', cursive;
+  scroll-behavior: smooth;
+  margin: 0%;
+  overflow:visible;
+}
+.App
+{
+}
+img
+{
+  width: 300px;
+  height: 300px;
+}

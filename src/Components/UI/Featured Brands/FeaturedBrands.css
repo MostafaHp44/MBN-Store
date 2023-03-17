@@ -1,0 +1,48 @@
+.FeaturedBrands
+{
+    margin: 5em;
+}
+h3
+{
+    text-align: center;
+    font-size: 26px;
+    line-height: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 32px;
+    padding-bottom: 12px;
+    position: relative;
+}
+h3::before
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    margin-left: -50px;
+    border-bottom: 2px solid #fff685;
+}
+.Brand
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em;
+}
+.picbrands
+{
+    width: 100px;
+    height: 70px;
+    transition: 0.5s;
+}
+.img-feature
+{
+    list-style-type: none;
+}
+.img-feature :hover
+{
+background-color: #ff1d58;
+border-radius: 5em;
+transition: 0.8s;
+}
