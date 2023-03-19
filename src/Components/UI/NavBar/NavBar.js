@@ -1,6 +1,8 @@
 import './NavBar.css'
 import logo from './logopage/logo.png'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
+import { Link as Link1 } from "react-scroll";
+
 import { UilDesktop,UilLaptop,UilMobileAndroid,UilUserSquare,UilShoppingCartAlt,UilAngleRightB,UilTrashAlt,UilShoppingCart} from '@iconscout/react-unicons'
 import Button from 'react-bootstrap/Button';
 import { useState} from 'react';
@@ -11,28 +13,26 @@ import Badge from 'react-bootstrap/Badge';
 const NavBar = (props) => {
 
 const numberCart=useSelector((state)=>state.numberCart)
+const favitem=useSelector((state)=>state.favitem)
+
 const Carts=useSelector((state)=>state.Carts)
 
 const [opencart,setopencart]=useState(false)
 
 const dispatch=useDispatch();
 
-const handelcart=()=>{
-    setopencart(current=>!current)
-}
+
 const handelprice=(price,item)=>{
     return Number(price * item).toLocaleString('en-US');
 }
-const handeltotalprice=()=>{
 
-}
 
     return (
         <div className='Main-Nav'>
     <div className='Nav'>
         <div className='Left-Nav'>
             <div className='logopage'>
-                <Link to="/"><img src={logo} className="logo"></img></Link>
+                <Link to="/" ><img src={logo} className="logo"></img></Link>
             </div>
         </div>
         <div className='Center-Nav'>
@@ -141,7 +141,8 @@ const handeltotalprice=()=>{
                        <div className='row--2'>
                             <div className='text-row--2'>
                             <h2 style={{fontWeight:"900",fontSize:"25px",color:"whitesmoke"}}>FavItem</h2>
-                            <span style={{fontWeight:"900",fontSize:"20px",color:"crimson"}}>Watch Your FavItem</span>
+                            <span style={{fontWeight:"900",fontSize:"20px",color:"crimson"}}>Watch Your FavItem</span> <Badge pill bg="primary">{favitem}</Badge>{' '}
+
                             </div>
                             <div className='icon-row--2'>
                                 <UilAngleRightB/>
@@ -172,14 +173,13 @@ Carts.map((item,key)=>(
         
 
         <div className='imgitem'>
-            <img style={{width:"30px",height:"30px"}}></img>
+            <img style={{width:"30px",height:"30px"}} src={item.img}></img>
         </div>
         <div className='titleitem'>
             <span>{item.title}</span>
         </div>
         <div className='priceitem'>
         <span>{item.price}<span  style={{color:"green"}}>.EGP</span></span>
-
         </div>
         <div className='quantityitem'>
 
@@ -190,7 +190,7 @@ Carts.map((item,key)=>(
         <div className='priciotem'>  
           <Badge pill bg="info">{handelprice(item.price,item.quantity)}$</Badge>{' '}
         </div>
-        <div className='deleteitem' onClick={()=>{dispatch(DeleteQuantity(key))}}>
+        <div className='deleteitem' onClick={()=>{dispatch(DeleteQuantity(key))}} style={{cursor:"pointer"}}>
             <UilTrashAlt/>
         </div>
     </div>
@@ -201,11 +201,11 @@ Carts.map((item,key)=>(
 {numberCart===0?
    <div className='totalprice' >
    <span> Your Cart Is Empty </span><UilShoppingCart size='50'/>
-   <Link to=''><Button variant="primary" >Start Shopping</Button>{' '}</Link>
+   <Link1 to='MainStartShopping' spy={true} smooth={true} offset={50} duration={100}><Button variant="primary" >Start Shopping</Button>{' '}</Link1>
 </div> 
 :
  <div className='totalprice' >
- <span> Your Total Product is : </span><Badge pill bg="info">{}$</Badge>{' '}
+ <span> Your Total Product is :{Carts.reduce((total, item)=>total+(item.price*item.quantity),0)} </span><Badge pill bg="info">{}$</Badge>{' '}
  <Link to='paymentprocess'><Button variant="primary" >Complate Checkout</Button>{' '}</Link>
 </div> 
 

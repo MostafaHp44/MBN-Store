@@ -1,0 +1,55 @@
+.MainStartShopping
+{
+padding: 2em;
+margin: 2em;
+}
+.Main-text
+{
+    text-align: center;
+    padding: 2em;
+    font-size: 30px;
+    font-weight: 700;
+}
+.Main-text>span::before
+{
+    content: '';
+    position: relative;
+    left: 20em;
+    top: 50px;
+    width: 5em;
+    margin-left: -50px;
+    display: block;
+    border-bottom: 2px solid royalblue;
+}
+.MainRow
+{
+    display: flex;
+    justify-content: space-around;
+}
+.Box1,
+.Box2,
+.Box3,
+.Box4,
+.Box5,
+.Box6
+{
+    border: 1px royalblue solid ;
+    padding: 2em;
+    font-size: 20px;
+    font-weight: 900;
+    transition: 0.4s;
+    text-align: center;
+}
+.Box1:hover,
+.Box2:hover,
+.Box3:hover,
+.Box4:hover,
+.Box5:hover,
+.Box6:hover
+{
+    background-color: royalblue;
+    color: white;
+    transition: 0.5s;
+}
+
+

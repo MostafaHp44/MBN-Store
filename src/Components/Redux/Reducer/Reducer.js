@@ -1,9 +1,13 @@
-import { ADD_TOCART,INCREASE_QUANTITY,DECREASE_QUANTITY,DELETE_Quantity, ADD_ITEM} from "../Action/actontype";
+import { ADD_TOCART,INCREASE_QUANTITY,DECREASE_QUANTITY,DELETE_Quantity, ADD_ITEM, FAV_ITEM} from "../Action/actontype";
 import img1 from './img/item1.png'
+import pcs1 from './img/pcas1.png'
+import pcs11 from './img/pcas1-1.png'
  export const initProduct = {
 
     numberCart:0,
+    favitem:0,
     Carts:[],
+    WishList:[],
     product:[
         {
             title:"Giga byte H410M H V2",
@@ -39,6 +43,17 @@ import img1 from './img/item1.png'
         quantity:1,
         id_product:'24',
    },
+   {
+    title:"MASTERBOX TD500 MESH V2",
+    price:1300,
+    statusstock:"InStock",
+    main_category:"PC",
+    category:"Cases",
+    img:pcs1,
+    imgone:pcs11,
+    quantity:1,
+    id_product:'276',
+},
     
 
 ],
@@ -56,7 +71,7 @@ const Reducer =( state=initProduct ,action )=>{
                 id_product:action.payload.id_product,
                 quantity:1,
                 title:action.payload.title,
-                image:action.payload.image,
+                img:action.payload.img,
                 price:action.payload.price,
                 statusstock:action.payload.statusstock,
                 main_category:action.payload.main_category,
@@ -77,7 +92,7 @@ const Reducer =( state=initProduct ,action )=>{
                     id_product:action.payload.id_product,
                     quantity:1,
                     title:action.payload.title,
-                    image:action.payload.image,
+                    img:action.payload.img,
                     price:action.payload.price,
                     statusstock:action.payload.statusstock,
                     main_category:action.payload.main_category,
@@ -90,7 +105,51 @@ const Reducer =( state=initProduct ,action )=>{
             ...state,
             numberCart:state.numberCart+1
         }
+           } 
+
+           case(FAV_ITEM) :
+       {
+        if(state.favitem=== 0){
+            let wishlist = {
+                id_product:action.payload.id_product,
+                quantity:1,
+                title:action.payload.title,
+                img:action.payload.img,
+                price:action.payload.price,
+                statusstock:action.payload.statusstock,
+                main_category:action.payload.main_category,
+                category:action.payload.category,
+            } 
+            state.WishList.push(wishlist); 
+        }
+        else{
+            let check = false;
+            state.WishList.map((item,key)=>{
+                if(item.id_product===action.payload.id_product){
+                    state.WishList[key].quantity++;
+                    check=true;
+                }
+            });
+            if(!check){
+                let wish_list = {
+                    id_product:action.payload.id_product,
+                    quantity:1,
+                    title:action.payload.title,
+                    img:action.payload.img,
+                    price:action.payload.price,
+                    statusstock:action.payload.statusstock,
+                    main_category:action.payload.main_category,
+                    category:action.payload.category,
+                }
+                state.WishList.push(wish_list);
+            }
+        }
+        return{
+            ...state,
+            favitem:state.favitem+1
+        }
            }   
+
 
         case(INCREASE_QUANTITY):
         {
@@ -104,7 +163,6 @@ const Reducer =( state=initProduct ,action )=>{
         }
             
            
-
         case DECREASE_QUANTITY:
             let quantity = state.Carts[action.payload].quantity;
             if(quantity>1){

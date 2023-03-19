@@ -1,9 +1,10 @@
 import { ADD_ITEM, ADD_TOCART,FAV_ITEM,INCREASE_QUANTITY,DECREASE_QUANTITY,DELETE_Quantity,UPDATE_CART} from "./actontype"; 
 
 
-export const favproduct=()=>{
+export const favproduct=(payload)=>{
     return{
         type:FAV_ITEM,
+        payload
     
     }
 }

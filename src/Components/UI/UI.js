@@ -5,6 +5,7 @@ import BestSeller from "./BestSeller/BestSeller";
 import { images } from "./BestSeller/images";
 import MainLastsNews from "./Main-LastsNews/Main-LastsNews";
 import Footer from "./Footer/Footer";
+import StartShopping from "./StartShopping/StartShopping";
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     <BestSeller images={images}/>
     <FeaturedBrands/>
     <SlideShow/>
+    <StartShopping/>
     <MainLastsNews/>
     <Footer/>
   

@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import Filter from '../../../../Dashbord/Admin/Tools/Filter/Filter';
 import { useDispatch,useSelector } from "react-redux";
-import { addtocart } from '../../../../Redux/Action/action';
+import { addtocart,favproduct} from '../../../../Redux/Action/action';
 import Item from '../../../../Dashbord/Admin/Tools/Item/Item';
 
 
@@ -32,7 +32,8 @@ const Msi = () => {
 
  }
 
-    
+ const[colorfav,setcolorfav]=useState('crimson')
+
 
     return (
 <div className='BigShow'>
@@ -99,7 +100,22 @@ product.filter((item)=>(item.typemotherboard==='MSI')).map((item,key)=>(
                              dispatch(addtocart(itemm))
 
                           }}><UilShoppingCart /></div>
-                          <div className='Fav-Item' ><UilHeartAlt /></div>
+   <div className='Fav-Item' onClick={()=>{
+                             const favitem={
+                                title:item.title,
+                                price:item.price,
+                                statusstock:item.statusstock,
+                                main_category:item.main_category,
+                                category:item.category,
+                                quantity:item.quantity,
+                                id_product:item.id_product,
+                                img:item.img
+                            }
+                            dispatch(favproduct(favitem))
+                            setcolorfav('white')
+                        
+                            
+                          }}><UilHeartAlt color={colorfav}/></div>
 
                       </div>
                       <div className='stockcard' style={item.statusstock==="InStock" ?{backgroundColor:"green"}:{backgroundColor:"crimson"}}><span>{item.statusstock}</span></div>
