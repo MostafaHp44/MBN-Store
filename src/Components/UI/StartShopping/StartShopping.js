@@ -28,19 +28,13 @@ const StartShopping = () => {
 
 <div className='MainRow'>
 <Swiper
-        modules={[Navigation, Pagination,  A11y,Virtual]}
+        modules={[Navigation, Pagination,Scrollbar , A11y,Virtual]}
         pagination={{ el: '.swiper-pagination', clickable: true }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-          clickable: true,
-        }}
-        
+        navigation
       spaceBetween={30}
       slidesPerView={3}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
-      className="swiper_container"
 
     >
 <SwiperSlide><Link to='motherboard' style={{textDecoration:"none"}}><div className='Box1'><img src={img1} style={{width:"30px",height:"30px"}}></img> <span>MotherBoard</span></div></Link></SwiperSlide>
@@ -50,18 +44,7 @@ const StartShopping = () => {
 <SwiperSlide><Link to='processor' style={{textDecoration:"none"}}><div className='Box5'><img src={img2} style={{width:"30px",height:"30px"}}></img> <span>Processor</span></div></Link></SwiperSlide>
 <SwiperSlide><Link to='graphiccard' style={{textDecoration:"none"}}><div className='Box6'><img src={img6} style={{width:"30px",height:"30px"}}></img> <span>Graphics Card</span></div></Link></SwiperSlide>
 </Swiper>
-<div className='slider-controler'>
 
-    <div className='swiper-button-next slider-controler' style={{position:"absolute",top:"116em"}}>
-       
-    </div>
-
-    <div className='swiper-button-prev slider-controler' style={{position:"absolute",top:"116em"}}>
-    </div>
-
-    <div className="swiper-pagination"></div>
-
-</div>
 
 </div>
 

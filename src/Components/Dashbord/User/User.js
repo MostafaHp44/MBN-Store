@@ -5,8 +5,7 @@ import './User.css'
 const User = () => {
     return (
     <div className="Main-User">
-        <Item/>
-       
+        <h1>Hello User </h1>
     </div>
     );
 }

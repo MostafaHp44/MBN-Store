@@ -17,7 +17,9 @@ function FormExampleLogin() {
   const[isadmin,setisadmin]=useState()
 
   const navigate=useNavigate();
- 
+ const handelrole=()=>{
+  setisadmin()
+ }
   const handleSubmit =  async(event) => {
     const form = event.currentTarget;
 
@@ -53,8 +55,8 @@ function FormExampleLogin() {
         password:password,
         adminrole:isadmin
        
-      }).then(()=>{
-        toast.success('فل اوي يا امبيسا ', {
+      }).then((res)=>{
+        toast.success(res, {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,

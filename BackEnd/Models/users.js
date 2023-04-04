@@ -54,7 +54,7 @@ userschema.method('getauthtoken',function(){
         fname:this.firstname,
         lname:this.lastname,
         adminrole:this.isadmin,
-
+        
     }
         ,config.get("jwtsec"))
     return token

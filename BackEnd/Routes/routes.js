@@ -10,15 +10,6 @@ const passport=require('passport')
 routess.post('/signup', middelwareuser , cotroler.CreateUser)
 
 
-routess.post('/login',
-  passport.authenticate('local', {
-    successRedirect:'/adminpanel',
-    successMessage:true,
-     failureRedirect: '/login',
-     failureMessage: true 
-    }),
-  function(req, res) {
-    res.redirect('/~' + req.user.username);
-  });
+routess.post('/login',middelwareadmin,cotroler.AuthUser);
 
 module.exports=routess

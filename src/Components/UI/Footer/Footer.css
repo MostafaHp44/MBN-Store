@@ -64,13 +64,14 @@
     transition: 0.5s;
 }
 
-@media (max-width:1024px)
+@media (max-width:1200px)
 {
 .Main-Footer
 {
     
     padding: 5em;
     width: 100em;
+    height: 61em;
 }    
 .Main-LastsNews
 {

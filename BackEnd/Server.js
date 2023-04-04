@@ -10,7 +10,9 @@ require('./passport/passportauth')(passport)
 
 
  
-app.use(cors())
+app.use(cors({
+   
+}))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 

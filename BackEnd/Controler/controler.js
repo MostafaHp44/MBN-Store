@@ -40,6 +40,7 @@ const CreateUser=async(req,res)=>{
 
     });
       await newuser.save();
+      res.redirect('/login')
       if(!config.get("jwtsec")) 
       return res.status(500).send('fullfiled')
   
@@ -71,20 +72,17 @@ const AuthUser=async(req,res)=>{
     let pass=await bcrypt.compare(data.password,mailuser.password)
     if(!pass)
     return res.status(400).send('invalid password')
-    if(mailuser.isadmin)
-    return res.send('admin').redirect('/adminpanel')
+
     
-    if(!mailuser.isadmin)
-    return res.send('notadmin').redirect('/userpanel')
 
 
     if(!config.get("jwtsec")) 
     return res.status(500).send('fullfiled')
 
-    const token=mailuser.getauthtoken();
-    
+    const token=mailuser.getauthtoken()
     res.header('xauthtoken',token)
-    res.status(200).send('login Sucessfully')
+
+    res.status(200).send(!mailuser.isadmin?' Login Successful User' :' Login Successful Admin')
 }
 
 catch(err)
@@ -97,4 +95,5 @@ catch(err)
 
 
 }
+
 module.exports= {CreateUser,AuthUser}

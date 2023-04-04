@@ -31,8 +31,32 @@
     background-color: #fafafa;
     padding: 3em;
 }
-.row--3
+.row1, .row2 {
+    border-bottom: 1px royalblue dashed;
+    padding: 1em;
+}
+.row3
 {
     text-align: center;
 
+}
+.text-row3
+{
+    font-size: 23px;
+    font-weight: 800;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+.btn-row3
+{
+    display: flex;
+    justify-content: space-around;
+    
+}
+@media (max-width:1200px)
+{
+    .Main-SignUp
+    {
+        width: 85em;
+    }
 }
